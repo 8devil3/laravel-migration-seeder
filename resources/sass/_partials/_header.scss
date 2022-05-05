@@ -1,0 +1,12 @@
+header{
+   @include flex();
+   background-color: #1a1a1a;
+   border-bottom: 1px var(--orange) solid;
+   padding: 1.5rem 1rem;
+   text-transform: capitalize;
+
+   img {
+      width: 4rem;
+      margin-right: 2rem;
+   }
+}
