@@ -14,8 +14,8 @@ class AddColumns extends Migration
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->date('DataPartenza')->default('2022-05-05');
-            $table->date('DataArrivo')->default('2022-05-05');
+            $table->date('DataPartenza')->default(date('Y-m-d'));
+            $table->date('DataArrivo')->default(date('Y-m-d'));
         });
     }
 
