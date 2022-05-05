@@ -72,3 +72,19 @@ main .false {
   color: #b83030;
 }
 
+main .th-departure {
+  background-color: #43438c;
+}
+
+main .th-arrival {
+  background-color: #3a667a;
+}
+
+main .departure {
+  background-color: rgba(67, 67, 140, 0.3098039216);
+}
+
+main .arrival {
+  background-color: rgba(58, 102, 122, 0.3098039216);
+}
+

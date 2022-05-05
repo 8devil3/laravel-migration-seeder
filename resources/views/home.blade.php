@@ -7,18 +7,18 @@
    <table>
       <tr>
          <th>&nbsp;</th>
-         <th colspan="3">Partenze</th>
-         <th colspan="3">Arrivi</th>
+         <th colspan="3" class="th-departure">Partenze</th>
+         <th colspan="3" class="th-arrival">Arrivi</th>
          <th colspan="4">&nbsp;</th>
       </tr>
       <tr>
          <th>Azienda</th>
-         <th>Stazione</th>
-         <th>Data</th>
-         <th>Orario</th>
-         <th>Stazione</th>
-         <th>Data</th>
-         <th>Orario</th>
+         <th class="th-departure">Stazione</th>
+         <th class="th-departure">Data</th>
+         <th class="th-departure">Orario</th>
+         <th class="th-arrival">Stazione</th>
+         <th class="th-arrival">Data</th>
+         <th class="th-arrival">Orario</th>
          <th>Codice treno</th>
          <th>Numero carrozze</th>
          <th>In orario?</th>
@@ -27,12 +27,12 @@
    @foreach ($trains as $train)
       <tr>
          <td>{{ $train['Azienda'] }}</td>
-         <td>{{ $train['StazionePartenza'] }}</td>
-         <td>{{ $train['DataPartenza'] }}</td>
-         <td>{{ $train['OrarioPartenza'] }}</td>
-         <td>{{ $train['StazioneArrivo'] }}</td>
-         <td>{{ $train['DataArrivo'] }}</td>
-         <td>{{ $train['OrarioArrivo'] }}</td>
+         <td class="departure">{{ $train['StazionePartenza'] }}</td>
+         <td class="departure">{{ date_format(date_create_from_format('Y-m-d', $train['DataPartenza']), 'd/m/Y') }}</td>
+         <td class="departure">{{ $train['OrarioPartenza'] }}</td>
+         <td class="arrival">{{ $train['StazioneArrivo'] }}</td>
+         <td class="arrival">{{ date_format(date_create_from_format('Y-m-d', $train['DataArrivo']), 'd/m/Y') }}</td>
+         <td class="arrival">{{ $train['OrarioArrivo'] }}</td>
          <td>{{ $train['CodiceTreno'] }}</td>
          <td>{{ $train['NumeroCarrozze'] }}</td>
          <td>
