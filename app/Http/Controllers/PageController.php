@@ -8,8 +8,9 @@ use App\Train;
 class PageController extends Controller
 {
    public function index(){
-      $trains = Train::orderBy('OrarioPartenza')
-                        ->where('DataPartenza', '>=', now())
+      $trains = Train::orderBy('DataPartenza')
+                        ->orderBy('OrarioPartenza')
+                        ->where('DataPartenza', '>=', date('Y-m-d'))
                         ->get();
 
       return view('home', compact('trains'));

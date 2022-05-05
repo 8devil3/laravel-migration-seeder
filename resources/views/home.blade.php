@@ -7,15 +7,17 @@
    <table>
       <tr>
          <th>&nbsp;</th>
-         <th colspan="2">Partenze</th>
-         <th colspan="2">Arrivi</th>
+         <th colspan="3">Partenze</th>
+         <th colspan="3">Arrivi</th>
          <th colspan="4">&nbsp;</th>
       </tr>
       <tr>
          <th>Azienda</th>
          <th>Stazione</th>
+         <th>Data</th>
          <th>Orario</th>
          <th>Stazione</th>
+         <th>Data</th>
          <th>Orario</th>
          <th>Codice treno</th>
          <th>Numero carrozze</th>
@@ -26,8 +28,10 @@
       <tr>
          <td>{{ $train['Azienda'] }}</td>
          <td>{{ $train['StazionePartenza'] }}</td>
+         <td>{{ $train['DataPartenza'] }}</td>
          <td>{{ $train['OrarioPartenza'] }}</td>
          <td>{{ $train['StazioneArrivo'] }}</td>
+         <td>{{ $train['DataArrivo'] }}</td>
          <td>{{ $train['OrarioArrivo'] }}</td>
          <td>{{ $train['CodiceTreno'] }}</td>
          <td>{{ $train['NumeroCarrozze'] }}</td>
