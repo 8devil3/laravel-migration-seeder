@@ -29,10 +29,10 @@
          <td>{{ $train['Azienda'] }}</td>
          <td class="departure">{{ $train['StazionePartenza'] }}</td>
          <td class="departure">{{ date_format(date_create_from_format('Y-m-d', $train['DataPartenza']), 'd/m/Y') }}</td>
-         <td class="departure">{{ $train['OrarioPartenza'] }}</td>
+         <td class="departure">{{ date_format(date_create_from_format('H:i:s', $train['OrarioPartenza']), 'H:i') }}</td>
          <td class="arrival">{{ $train['StazioneArrivo'] }}</td>
          <td class="arrival">{{ date_format(date_create_from_format('Y-m-d', $train['DataArrivo']), 'd/m/Y') }}</td>
-         <td class="arrival">{{ $train['OrarioArrivo'] }}</td>
+         <td class="arrival">{{ date_format(date_create_from_format('H:i:s', $train['OrarioArrivo']), 'H:i') }}</td>
          <td>{{ $train['CodiceTreno'] }}</td>
          <td>{{ $train['NumeroCarrozze'] }}</td>
          <td>
