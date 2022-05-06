@@ -52,5 +52,8 @@
       </tr>
    @endforeach
    </table>
+   {{ $trains->links() }}
+   <p class="pagination-count">Risultati per pagina: <strong>{{ $trains->perPage() }}</strong></p>
+   <p class="pagination-count">Risultati totali: <strong>{{ $trains->total() }}</strong></p>
 </main>
 @endsection
