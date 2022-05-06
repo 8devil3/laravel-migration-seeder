@@ -10,7 +10,7 @@ class PageController extends Controller
    public function index(){
       $trains = Train::orderBy('DataPartenza')
                         ->orderBy('OrarioPartenza')
-                        ->paginate(20);
+                        ->paginate(100);
 
       return view('home', compact('trains'));
    }
