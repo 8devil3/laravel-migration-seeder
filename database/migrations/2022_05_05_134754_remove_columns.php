@@ -14,8 +14,6 @@ class RemoveColumns extends Migration
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->dropColumn('created_at');
-            $table->dropColumn('updated_at');
             $table->dropColumn('colonnaProva');
         });
     }
@@ -28,8 +26,7 @@ class RemoveColumns extends Migration
     public function down()
     {
         Schema::table('trains', function (Blueprint $table) {
-         $table->timestamp('created_at');
-         $table->timestamp('updated_at');
+         $table->timestamp('colonnaProva');
         });
     }
 }
