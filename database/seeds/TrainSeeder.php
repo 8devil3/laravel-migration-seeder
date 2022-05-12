@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\Train;
-use Faker\Generator as Faker;
+use Faker\Generator as FakerGenerator;
+use Faker\Factory as FakerFactory;
 
 class TrainSeeder extends Seeder
 {
@@ -11,9 +12,11 @@ class TrainSeeder extends Seeder
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run(FakerGenerator $faker)
     {
-        for ($i=0; $i < 400; $i++) {
+      $faker = FakerFactory::create('it_IT');
+
+      for ($i=0; $i < 400; $i++) {
            $train = new Train();
 
            $arrTrains = [
